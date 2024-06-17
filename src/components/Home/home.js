@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function Home() {
   const [posters, setPosters] = useState([]);
 
   useEffect(() => {
     const fetchPosters = async () => {
-      const response = await fetch('http://www.omdbapi.com/?apikey=38c5d5e3&s=batman');
-      const data = await response.json();
-      setPosters(data.Search);
+      const response = await axios.get('http://www.omdbapi.com/?apikey=38c5d5e3&s=batman');
+      setPosters(response.data.Search);
     };
 
     fetchPosters();
