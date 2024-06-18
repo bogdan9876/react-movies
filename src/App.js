@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className={darkMode ? 'app dark' : 'app'}>
-      <h1 style={{ textAlign: 'center' }}>Batman Posters</h1>
+      <h1 style={{ textAlign: 'center' , margin: '0rem', paddingTop: '1.5rem'}}>Batman Posters</h1>
       <DarkMode />
       <Home />
     </div>
